@@ -9,31 +9,31 @@ testingAngular.controller('namesController', function namesController($scope) {
 			name: 'Joanne',
 			position: 'front right',
 			seniority: 4,
-			gender: female
+			gender: 'female'
 			//hasCubicle: true
 		}, {
 			name: 'Ron',
 			position: 'back right',
 			seniority: 3,
-			gender: male
+			gender: 'male'
 			//hasCubicle: true
 		}, {
 			name: 'Rick',
 			position: 'front left',
 			seniority: 2,
-			gender: male
+			gender: 'male'
 			//hasCubicle: true
 		}, {
 			name: 'Joe',
 			position: 'back left',
 			seniority: 4,
-			gender: male
+			gender:'male'
 			//hasCubicle: true
 		}, {
 			name: 'Brendan',
 			position: 'corner',
 			seniority: 5,
-			gender: male
+			gender: 'male'
 			//hasCubicle: false
 		}
 	];
