@@ -1,0 +1,32 @@
+﻿<!doctype html>
+
+<html lang="en" ng-app="testingAngular">
+<head>
+    <meta charset="utf-8" />
+    <title>Testing out AngularJS</title>
+	<script src="angular-1.6.4/angular.js"></script>
+	<script src="namesController.js"></script>
+</head>
+<body ng-controller="namesController">
+
+	<p>
+	Search: <input ng-model="userInput" />
+	</p>
+
+	<p>
+		Sort by:
+		<select ng-model="orderProp">
+			<option value="name">Alphabetical</option>
+			<option value="seniority">Seniority</option>
+		</select>
+	</p>
+
+
+	<ul>
+		<li ng-repeat="person in names | filter: userInput | orderBy: orderProp">
+			<p>{{person.name}} - {{person.position}}</p>
+		</li>
+	</ul>
+
+</body>
+</html>
