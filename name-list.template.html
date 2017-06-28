@@ -16,6 +16,6 @@
 
 <ul class="names">
 	<li ng-repeat="person in $ctrl.names | filter: {name: $ctrl.userInputName} | filter: {position: $ctrl.userInputPosition} | orderBy: $ctrl.orderProp" class="thumbnail">
-		<a href="#/people/{{ person.name }}">{{person.name}}</a> - {{ person.position }} <br />
+		<a href="#!/people/{{person.name}}">{{person.name}}</a> - {{ person.position }} <br />
 	</li>
 </ul>
