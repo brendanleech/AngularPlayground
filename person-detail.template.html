@@ -1,0 +1,24 @@
+﻿<h1>{{$ctrl.person.name}}</h1>
+
+<h2>Position: {{$ctrl.person.position}}</h2>
+
+<ul>
+	<li>Gender: {{$ctrl.person.gender}}</li>
+	<li>Seniority Level (lower number means more power): {{$ctrl.person.seniority}}</li>
+	<li>{{$ctrl.person.name}} has a cubicle:</li>
+		<ul>
+			<li ng-if="$ctrl.person.hasCubicle === true">Yes!</li>
+		</ul>
+		<ul>
+			<li ng-if="$ctrl.person.hasCubicle != true">No!</li>
+		</ul>
+	<li ng-if="$ctrl.person.gender === 'male' && $ctrl.person.numberScreens != 1">He has {{$ctrl.person.numberScreens}} screens!</li>
+	<li ng-if="$ctrl.person.gender === 'male' && $ctrl.person.numberScreens === 1">He has {{$ctrl.person.numberScreens}} screen!</li>
+	<li ng-if="$ctrl.person.gender === 'female' && $ctrl.person.numberScreens != 1">She has {{$ctrl.person.numberScreens}} screens!</li>
+	<li ng-if="$ctrl.person.gender === 'female' && $ctrl.person.numberScreens === 1">She has {{$ctrl.person.numberScreens}} screen!</li>
+</ul>
+
+<br />
+<br />
+
+<button ng-click="download()">Download</button>
