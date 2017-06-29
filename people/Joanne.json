@@ -3,5 +3,6 @@
 	"position": "front right",
 	"seniority": 3,
 	"gender": "female",
-	"hasCubicle": true
+	"hasCubicle": true,
+	"numberScreens": 2
 }
