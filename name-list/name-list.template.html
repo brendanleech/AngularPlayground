@@ -7,15 +7,32 @@
 </p>
 
 <p>
+	Show only:<br />
+	<input type="radio" ng-model="$ctrl.genderSelect" value="male">Males<br />
+	<input type="radio" ng-model="$ctrl.genderSelect" value="female">Females<br />
+	<input type="radio" ng-model="$ctrl.genderSelect" value="either">Either<br /><br />
+	<input type="radio" ng-model="$ctrl.cubicleSelect" value="true">Has a Cubicle<br />
+	<input type="radio" ng-model="$ctrl.cubicleSelect" value="false">Does not have a Cubicle<br />
+	<input type="radio" ng-model="$ctrl.cubicleSelect" value="either">Either<br /><br />
+</p>
+
+<p>
 	Sort by:
 	<select ng-model="$ctrl.orderProp">
 		<option value="name">Alphabetical</option>
 		<option value="seniority">Seniority</option>
+		<option value="-numberScreens">Number of Screens</option>
 	</select>
 </p>
 
 <ul class="names">
-	<li ng-repeat="person in $ctrl.names | filter: {name: $ctrl.userInputName} | filter: {position: $ctrl.userInputPosition} | orderBy: $ctrl.orderProp" class="thumbnail">
+	<li ng-init="($ctrl.cubicleSelect='either') ($ctrl.genderSelect='either')"
+		ng-show="(($ctrl.genderSelect === person.gender)
+		|| ($ctrl.genderSelect === 'either')) &&
+		(($ctrl.cubicleSelect === 'true' && person.hasCubicle === true)
+		|| ($ctrl.cubicleSelect === 'false' && person.hasCubicle === false)
+		|| ($ctrl.cubicleSelect === 'either'))"
+		ng-repeat="person in $ctrl.names | filter: {name: $ctrl.userInputName} | filter: {position: $ctrl.userInputPosition} | orderBy: $ctrl.orderProp" class="thumbnail">
 		<a href="#!/people/{{person.name}}">{{person.name}}</a> - {{ person.position }} <br />
 	</li>
 </ul>

@@ -3,5 +3,6 @@
 	"position": "corner",
 	"seniority": 5,
 	"gender": "male",
-	"hasCubicle": false
+	"hasCubicle": false,
+	"numberScreens": 1
 }

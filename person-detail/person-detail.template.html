@@ -12,4 +12,13 @@
 		<ul>
 			<li ng-if="$ctrl.person.hasCubicle != true">No!</li>
 		</ul>
+	<li ng-if="$ctrl.person.gender === 'male' && $ctrl.person.numberScreens != 1">He has {{$ctrl.person.numberScreens}} screens!</li>
+	<li ng-if="$ctrl.person.gender === 'male' && $ctrl.person.numberScreens === 1">He has {{$ctrl.person.numberScreens}} screen!</li>
+	<li ng-if="$ctrl.person.gender === 'female' && $ctrl.person.numberScreens != 1">She has {{$ctrl.person.numberScreens}} screens!</li>
+	<li ng-if="$ctrl.person.gender === 'female' && $ctrl.person.numberScreens === 1">She has {{$ctrl.person.numberScreens}} screen!</li>
 </ul>
+
+<br />
+<br />
+
+<button ng-click="download()">Download</button>

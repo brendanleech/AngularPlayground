@@ -3,5 +3,6 @@
 	"position": "back right",
 	"seniority": 2,
 	"gender": "male",
-	"hasCubicle": true
+	"hasCubicle": true,
+	"numberScreens": 2
 }
