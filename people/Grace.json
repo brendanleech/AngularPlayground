@@ -1,0 +1,9 @@
+{
+	"name": "Grace",
+	"cubeBlock": "left",
+	"position": "front right",
+	"seniority": 4,
+	"gender": "female",
+	"hasCubicle": true,
+	"numberScreens": 2
+}
