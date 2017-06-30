@@ -1,5 +1,6 @@
 {
 	"name": "Ron",
+	"cubeBlock": "right",
 	"position": "back right",
 	"seniority": 2,
 	"gender": "male",
