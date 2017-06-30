@@ -1,9 +1,0 @@
-{
-	"name": "Bill",
-	"cubeBlock": "center",
-	"position": "front right",
-	"seniority": 3,
-	"gender": "male",
-	"hasCubicle": true,
-	"numberScreens": 2
-	}
