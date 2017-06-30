@@ -1,0 +1,9 @@
+{
+	"name": "Josh",
+	"cubeBlock": "none",
+	"position": "corner",
+	"seniority": 5,
+	"gender": "male",
+	"hasCubicle": false,
+	"numberScreens": 1
+}

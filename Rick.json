@@ -1,0 +1,9 @@
+{
+	"name": "Rick",
+	"cubeBlock": "right",
+	"position": "front left",
+	"seniority": 1,
+	"gender": "male",
+	"hasCubicle": true,
+	"numberScreens": 3
+}
