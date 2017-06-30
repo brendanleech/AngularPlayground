@@ -1,3 +1,7 @@
+<head>
+	<link rel="../styles.css" href="../styles.css" />
+</head>
+
 <p>
 	Search by name: <input ng-model="$ctrl.userInputName" />
 </p>
@@ -8,12 +12,22 @@
 
 <p>
 	Show only:<br />
-	<input type="radio" ng-model="$ctrl.genderSelect" value="male">Males<br />
-	<input type="radio" ng-model="$ctrl.genderSelect" value="female">Females<br />
-	<input type="radio" ng-model="$ctrl.genderSelect" value="either">Either<br /><br />
-	<input type="radio" ng-model="$ctrl.cubicleSelect" value="true">Has a Cubicle<br />
-	<input type="radio" ng-model="$ctrl.cubicleSelect" value="false">Does not have a Cubicle<br />
-	<input type="radio" ng-model="$ctrl.cubicleSelect" value="either">Either<br /><br />
+	<p>
+		<input type="radio" ng-model="$ctrl.genderSelect" value="male">Males<br />
+		<input type="radio" ng-model="$ctrl.genderSelect" value="female">Females<br />
+		<input type="radio" ng-model="$ctrl.genderSelect" value="either">Either<br /><br />
+	</p>
+	<p id="radio1">
+		<input type="radio" ng-model="$ctrl.cubicleSelect" value="true">Has a Cubicle<br />
+		<input type="radio" ng-model="$ctrl.cubicleSelect" value="false">Does not have a Cubicle<br />
+		<input type="radio" ng-model="$ctrl.cubicleSelect" value="either">Either<br /><br />
+	</p>
+	<p id="radio2">
+		<input type="radio" ng-model="$ctrl.groupSelect" value="left">Left cubicles<br />
+		<input type="radio" ng-model="$ctrl.groupSelect" value="center">Center cubicles<br />
+		<input type="radio" ng-model="$ctrl.groupSelect" value="right">Right cubicles<br />
+		<input type="radio" ng-model="$ctrl.groupSelect" value="any">Any cubicles<br /><br />
+	</p>
 </p>
 
 <p>
@@ -26,12 +40,14 @@
 </p>
 
 <ul class="names">
-	<li ng-init="($ctrl.cubicleSelect='either') ($ctrl.genderSelect='either')"
+	<li ng-init="$ctrl.cubicleSelect='either'; $ctrl.genderSelect='either'; $ctrl.groupSelect='any'"
 		ng-show="(($ctrl.genderSelect === person.gender)
 		|| ($ctrl.genderSelect === 'either')) &&
 		(($ctrl.cubicleSelect === 'true' && person.hasCubicle === true)
 		|| ($ctrl.cubicleSelect === 'false' && person.hasCubicle === false)
-		|| ($ctrl.cubicleSelect === 'either'))"
+		|| ($ctrl.cubicleSelect === 'either')) &&
+		(($ctrl.groupSelect === person.cubeBlock)
+		|| ($ctrl.groupSelect === 'any'))"
 		ng-repeat="person in $ctrl.names | filter: {name: $ctrl.userInputName} | filter: {position: $ctrl.userInputPosition} | orderBy: $ctrl.orderProp" class="thumbnail">
 		<a href="#!/people/{{person.name}}">{{person.name}}</a> - {{ person.position }} <br />
 	</li>
