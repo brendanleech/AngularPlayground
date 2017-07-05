@@ -1,5 +1,5 @@
 <head>
-	<link rel="../styles.css" href="../styles.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <p>
@@ -10,25 +10,32 @@
 	Search by position: <input ng-model="$ctrl.userInputPosition" />
 </p>
 
+
+
 <p>
-	Show only:<br />
-	<p>
-		<input type="radio" ng-model="$ctrl.genderSelect" value="male">Males<br />
-		<input type="radio" ng-model="$ctrl.genderSelect" value="female">Females<br />
-		<input type="radio" ng-model="$ctrl.genderSelect" value="either">Either<br /><br />
-	</p>
-	<p id="radio1">
-		<input type="radio" ng-model="$ctrl.cubicleSelect" value="true">Has a Cubicle<br />
-		<input type="radio" ng-model="$ctrl.cubicleSelect" value="false">Does not have a Cubicle<br />
-		<input type="radio" ng-model="$ctrl.cubicleSelect" value="either">Either<br /><br />
-	</p>
-	<p id="radio2">
-		<input type="radio" ng-model="$ctrl.groupSelect" value="left">Left cubicles<br />
-		<input type="radio" ng-model="$ctrl.groupSelect" value="center">Center cubicles<br />
-		<input type="radio" ng-model="$ctrl.groupSelect" value="right">Right cubicles<br />
-		<input type="radio" ng-model="$ctrl.groupSelect" value="any">Any cubicles<br /><br />
-	</p>
-</p>
+    Show only:<br />
+</p>    
+<div class="grid">
+    <div class="col-1-6">
+        <input type="radio" ng-model="$ctrl.genderSelect" value="male">Males<br />
+        <input type="radio" ng-model="$ctrl.genderSelect" value="female">Females<br />
+        <input type="radio" ng-model="$ctrl.genderSelect" value="either">Either<br /><br />
+    </div>
+    <div class="col-1-4">
+        <input type="radio" ng-model="$ctrl.cubicleSelect" value="true">Has a Cubicle<br />
+        <input type="radio" ng-model="$ctrl.cubicleSelect" value="false">Does not have a Cubicle<br />
+        <input type="radio" ng-model="$ctrl.cubicleSelect" value="either">Either<br /><br />
+    </div>
+    <div class="col-1-4">
+        <input type="radio" ng-model="$ctrl.groupSelect" value="left">Left cubicles<br />
+        <input type="radio" ng-model="$ctrl.groupSelect" value="center">Center cubicles<br />
+        <input type="radio" ng-model="$ctrl.groupSelect" value="right">Right cubicles<br />
+        <input type="radio" ng-model="$ctrl.groupSelect" value="any">Any cubicles<br /><br />
+    </div>
+</div>
+
+
+
 
 <p>
 	Sort by:
